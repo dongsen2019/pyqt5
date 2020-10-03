@@ -28,7 +28,6 @@ class Window(QWidget):
             控件允许输入QKeySequence, 它通常用作快捷方式。
             当控件收到焦点时开始录制，并在用户释放最后一个关键字后一秒钟结束录制
             
-            
         """
 if __name__ == '__main__':
     import sys
