@@ -41,7 +41,7 @@ class MyASB(QAbstractSpinBox):
             stepBy(self, p_int)
         """
 
-    def validate(self, p_str, p_int):
+    def validate(self, p_str, p_int):   # p_int表示光标位置
         # 18 - 180
         num = int(p_str)
         if num < 18:
@@ -50,6 +50,7 @@ class MyASB(QAbstractSpinBox):
             return (QValidator.Acceptable, p_str, p_int)
         else:
             return (QValidator.Invalid, p_str, p_int)
+
 
     def fixup(self, p_str):
         print(p_str)

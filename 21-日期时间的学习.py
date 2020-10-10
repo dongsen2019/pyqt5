@@ -1,5 +1,6 @@
 from PyQt5.Qt import *
 
+
 class Window(QWidget):
     def __init__(self):
         super().__init__()
@@ -100,6 +101,7 @@ class Window(QWidget):
             second() 
             msec()
         """
+
 
 if __name__ == '__main__':
     import sys

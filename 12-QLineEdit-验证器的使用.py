@@ -28,7 +28,7 @@ class AgeVadidator(QValidator):
     1.验证器：用于验证用户输入数据的合法性
     
     2.如果一个输入框设置了验证器，到时用户在文本框中输入内容时，首先会将内容传递给验证器进行验证
-    validate(self, input_text, pos)
+    validate(self, input_text, pos)     ！！！pos表示光标位置
     return (QValidator.Acceptable,  input_text, pos)    验证通过
     return (QValidator.Intermediate,  input_text, pos)  暂不作判定是否通过验证
     return (QValidator.Invalid,  input_text, pos)   验证不通过
