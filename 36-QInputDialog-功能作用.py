@@ -131,7 +131,6 @@ class Window(QWidget):
             textValueSelected(text_str)
         """
 
-
         input_d.show()
 
 
