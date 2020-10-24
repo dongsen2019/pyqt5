@@ -121,7 +121,6 @@ class Window(QWidget):
 
         input_d.textValueChanged.connect(lambda val: print("字符串型数据发生改变", val))
         input_d.textValueSelected.connect(lambda val: print("字符串型数据最终被选中", val))
-
         """
         信号
             intValueChanged(int value)
