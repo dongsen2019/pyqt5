@@ -42,6 +42,8 @@ class Window(QWidget):
 
     def setup_ui(self):
         te = MyTextEdit("xxx", self)
+        te.viewport().setCursor(Qt.ArrowCursor)
+        "改变QTextEdit鼠标形状"
         self.te = te
         te.move(50, 50)
         te.resize(300, 300)
@@ -56,7 +58,7 @@ class Window(QWidget):
         test_btn.setText("测试按钮")
         test_btn.pressed.connect(self.btn_test)
 
-        # self.占位文本的提示()
+        # self.只读设置()
         # self.文本内容的设置()
         # tlf = QTextListFormat()
         # tlf.setIndent(3)
