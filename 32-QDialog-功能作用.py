@@ -18,7 +18,7 @@ d = QDialog(window)
 btn1 = QPushButton(d)
 btn1.setText("btn1")
 btn1.move(20, 20)
-btn1.clicked.conect(lambda :d.accept())
+btn1.clicked.connect(lambda :d.accept())
 
 btn2 = QPushButton(d)
 btn2.setText("btn2")

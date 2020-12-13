@@ -38,14 +38,25 @@ class Window(QWidget):
         """
 
         pd.setCancelButtonText("取消下载")
+        "取消按钮文本     setCancelButtonText(cancelButtonText_str)"
 
         pd.setRange(0, 100)
         pd.setValue(95)
         print(pd.minimum())
         print(pd.maximum())
+        """
+        数据处理
+            最小值和最大值
+                setMinimum(int minimum)     minimum() -> int
+                setMaximum(int maximum)     maximum() -> int
+                setRange(int minimum, int maximum)
+        当前数值
+            setValue(int progress)
+            value() -> int
+        """
 
-        # pd.setAutoClose(False)
-        # pd.setAutoReset(False)
+        pd.setAutoClose(False)
+        pd.setAutoReset(False)
         """
         自动操作
             setAutoClose(bool close)    autoClose() -> bool     当进度拉满，自动关闭
@@ -66,6 +77,7 @@ class Window(QWidget):
                     如果在等待直接内, 进度条满了, 就不会弹出
                     否则, 会被弹出
         """
+
         # for i in range(1, 101):
         #     # import time
         #     # time.sleep(1)
@@ -79,13 +91,28 @@ class Window(QWidget):
                 print(pd.autoClose())
             pd.setValue(pd.value() + 1)
 
-            if pd.value() == 98:
+            if pd.value() == 101:
                 pd.cancel()
+            """
+            是否取消
+                cancel()    手动代码调用取消对话框
+                wasCanceled() -> bool
+            """
+
+            """
+            自动关闭需要满足3个条件：
+                自动重置为True
+                自动关闭为True
+                进度值为100%
+            """
 
         timer.timeout.connect(test)
         timer.start(1000)
 
         pd.canceled.connect(timer.stop)
+        """
+        信号      canceled()
+        """
 
 
 if __name__ == '__main__':
